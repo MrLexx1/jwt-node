@@ -1,8 +1,11 @@
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://127.0.0.1:27017/jwt_db", {
-  serverSelectionTimeoutMS: 5000,
-});
+mongoose.connect(
+  "mongodb+srv://muhilman606:jgOEkoy95cJSxOYN@backend.sllgl.mongodb.net/jwt_db?retryWrites=true&w=majority&appName=backend",
+  {
+    serverSelectionTimeoutMS: 5000,
+  }
+);
 
 mongoose.connection.on("connected", () => {
   console.log("Connected to MongoDB");
